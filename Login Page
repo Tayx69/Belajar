@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <img src="Ameri kawaii.jpg" alt="Profile Picture">
+        <h2>Login</h2>
+        <div class="input-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter your username">
+        </div>
+        <div class="input-group">
+            <label for="password">Password</label>
+            <div class="password-container">
+                <input type="password" id="password" placeholder="Enter your password">
+                <i class="fas fa-eye" id="togglePassword"></i>
+            </div>
+        </div>
+        <button type="submit">Login</button>
+        <div class="sign">
+            Don't have an account? <a href="#">Sign up</a>
+        </div>
+    </div>
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(Background.jpg);
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(10px); 
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+}
+
+.container img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.container h2 {
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+    margin-right: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.password-container {
+    position: relative;
+}
+
+.password-container i {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #555;
+}
+
+.password-container i:hover {
+    color: #333;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.sign {
+    margin-top: 15px;
+    color: #fff;
+}
+
+.sign a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.sign a:hover {
+    text-decoration: underline;
+}
+</style>
+
+    <script>
+        const togglePassword = document.querySelector('#togglePassword');
+        const password = document.querySelector('#password');
+
+        togglePassword.addEventListener('click', function () {
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+            this.classList.toggle('fa-eye-slash');
+        });
+    </script>
+</body>
+</html>
