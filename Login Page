@@ -8,7 +8,108 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+<style>
+    body {
+    margin: 0;
+    padding: 0;
+    font-family: 'DM Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(Background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.bar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.tab {
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.tab:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(35px);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: rgb(255, 243, 243);
+    width: 300px;
+    text-align: center;
+}
+
+.container img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.container h2 {
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 24px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.password-container {
+    position: relative;
+}
+
+.password-container i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+}
+</style>
 <body>
+    <div class="bar">
+        <span class="tab">Home</span>
+        <span class="tab">Sosial</span>
+        <span class="tab">Project</span>
+        <a href="https://github.com/TheOnlyAmerii/Belajar" class="tab">Github</a>
+    </div>
     <div class="container">
         <img src="Ameri kawaii.jpg" alt="Profile Picture">
         <h2>Login</h2>
@@ -29,111 +130,9 @@
         </div>
     </div>
 
-<style>
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'DM Sans', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-image: url(Background.jpg);
-}
-
-.container {
-    background: rgba(255, 255, 255, 0.2); 
-    backdrop-filter: blur(10px); 
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    width: 300px;
-    text-align: center;
-}
-
-.container img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-}
-
-.container h2 {
-    margin-bottom: 20px;
-    color: #fff;
-}
-
-.input-group {
-    margin-bottom: 15px;
-    text-align: left;
-    margin-right: 20px;
-}
-
-.input-group label {
-    display: block;
-    margin-bottom: 5px;
-    color: #fff;
-}
-
-.input-group input {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.8);
-}
-
-.password-container {
-    position: relative;
-}
-
-.password-container i {
-    position: absolute;
-    right: 0px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    color: #555;
-}
-
-.password-container i:hover {
-    color: #333;
-}
-
-button {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background: #007bff;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #0056b3;
-}
-
-.sign {
-    margin-top: 15px;
-    color: #fff;
-}
-
-.sign a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.sign a:hover {
-    text-decoration: underline;
-}
-</style>
-
     <script>
         const togglePassword = document.querySelector('#togglePassword');
         const password = document.querySelector('#password');
-
         togglePassword.addEventListener('click', function () {
             const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
             password.setAttribute('type', type);
