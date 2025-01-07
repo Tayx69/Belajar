@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,17 +17,22 @@
 
 body {
     font-family: 'Playpen Sans';
-    background-image: linear-gradient(90deg, #ff69b4, #ff99cc, #ff69b4); /* Gradien warna cinta */
+    margin: 0px;
+    height: 100vh;
+    background-image: linear-gradient(45deg, #ff69b4, #ff99cc, #ff69b4);
     background-size: 200% 100%;
-    animation: loveBackground 5s linear infinite;
+    animation: loveBackground 8s ease infinite;
 }
 
 @keyframes loveBackground {
     0% {
-        background-position: 0% 0%;
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
     }
     100% {
-        background-position: 100% 0%;
+      background-position: 0% 50%;
     }
 }
 
