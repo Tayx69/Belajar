@@ -1,1 +1,71 @@
-https://www.instagram.com/prastayo_id?igsh=M2x1dmV4dXlwY3Bx
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Curved Navbar</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .navbar {
+      background: #000;
+      width: 250px;
+      height: 60px;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      position: relative;
+    }
+
+    .center-button {
+      background: #000;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 0 5px white;
+    }
+
+    .icon {
+      color: white;
+      font-size: 20px;
+      z-index: 1;
+    }
+
+    .navbar .icon-btn {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 22px;
+      cursor: pointer;
+    }
+  </style>
+  <!-- Load icon from font-awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="center-button">
+      <i class="fas fa-fire icon"></i>
+    </div>
+    <button class="icon-btn"><i class="fas fa-cog"></i></button>
+    <button class="icon-btn"><i class="fas fa-home"></i></button>
+  </div>
+
+</body>
+</html>
