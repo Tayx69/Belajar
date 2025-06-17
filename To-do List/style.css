@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: 0;
+  text-decoration: none;
+}
+
+body {
+  color: #333;
+  font-family: "Poppins";
+  background: linear-gradient(-45deg, #5ee7df, #b490ca, #86a8e7, #91eae4);
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0 9%;
+}
+
+.wrapper {
+  width: 50rem;
+  height: 30rem;
+  margin: 0 auto;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  padding: 9px;
+  background-color: grey;
+  border-radius: 5px;
+}
+
+.circle {
+  padding: 0 4px;
+}
+
+.box {
+  display: inline-block;
+  align-items: center;
+  width: 10px;
+  height: 10px;
+  padding: 1px;
+  border-radius: 50%;
+}
+
+.red-circle {
+  background-color: #ff605c;
+}
+
+.yellow-circle {
+  background-color: #ffbd44;
+}
+
+.green-circle {
+  background-color: #00ca4e;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.content h2 {
+  text-align: center;
+}
+
+.content input {
+  background-color: #e0e0e0;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  width: 20rem;
+  border-radius: 5px;
+  font-family: "Poppins";
+  font-weight: 700;
+  color: #555;
+  text-align: center;
+}
+
+.content input::placeholder {
+  font-family: "Poppins";
+  color: #888;
+  text-align: center;
+  font-weight: 700;
+}
+
+.content input:focus {
+  outline: none;
+  color: #888;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.content input:focus::placeholder {
+  color: transparent;
+}
+
+.content .add-btn {
+  background-color: #00ca4e;
+  padding: 0.5rem 1rem;
+  margin-top: 0.8rem;
+  font-family: "Poppins";
+  font-weight: 700;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.content .add-btn:hover {
+  background-color: #029d3e;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.warning-text {
+  margin: 0.5rem;
+  color: #ff1818;
+}
+
+.content .to-do-list {
+  border-top: 1px solid #000;
+  width: 100%;
+  margin: 2rem;
+  max-height: 17rem;
+  overflow-y: auto;
+}
+
+.content .to-do-list ul {
+  list-style: none;
+  padding: 0 2%;
+  text-align: left;
+}
+
+.content .to-do-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  border-bottom: 1px solid #000;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.delete-btn {
+  background-color: #ff605c;
+  color: white;
+  border: none;
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Poppins";
+  font-weight: 600;
+}
+
+.delete-btn:hover {
+  background-color: #e94b48;
+  transition: 0.3s ease-in-out;
+}
+
+.content .to-do-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.content .to-do-list::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+/* Handphone */
+
+@media (max-width: 768px) {
+  .content input {
+    max-width: 15rem;
+  }
+}
